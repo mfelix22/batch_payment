@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\paymentController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\BcaController;
 use App\Http\Controllers\BniController;
 use App\Http\Controllers\BriController;
@@ -11,8 +11,8 @@ use App\Http\Controllers\MandiriController;
 use App\Http\Controllers\SumselBabelController;
 
 // Batch Payment Routes (Original)
-Route::get('/', [paymentController::class, 'index'])->name('home');
-Route::post('/payment/upload', [paymentController::class, 'upload']);
+Route::get('/', [PaymentController::class, 'index'])->name('home');
+Route::post('/payment/upload', [PaymentController::class, 'upload']);
 Route::post('/payment/export', [PaymentController::class, 'export'])->name('payment.export');
 
 // Bank Import Routes (Merged from import_bank)
