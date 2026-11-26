@@ -8,7 +8,6 @@ RUN npm install --ignore-scripts
 
 COPY vite.config.js ./
 COPY resources/ ./resources/
-COPY public/ ./public/
 
 RUN npm run build
 
